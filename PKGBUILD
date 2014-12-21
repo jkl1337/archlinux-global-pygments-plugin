@@ -3,12 +3,13 @@
 _pkgname=global-pygments-plugin
 pkgname=global-pygments-plugin-git
 pkgver=0.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Pygments Plug-in Parser for GNU GLOBAL"
 arch=('i686' 'x86_64')
 url="https://github.com/yoshizow/global-pygments-plugin"
 license=('GPL')
 depends=('global' 'python2-pygments' 'python2-mock')
+makedepends=('git')
 optdepends=('idutils' 'ctags')
 options=(!emptydirs libtool)
 install=global-pygments-plugin.install
