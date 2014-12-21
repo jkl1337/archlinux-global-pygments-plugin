@@ -2,8 +2,8 @@
 
 _pkgname=global-pygments-plugin
 pkgname=global-pygments-plugin-git
-pkgver=0.1.1
-pkgrel=2
+pkgver=0.1.1.r3.gaebed6d
+pkgrel=1
 pkgdesc="Pygments Plug-in Parser for GNU GLOBAL"
 arch=('i686' 'x86_64')
 url="https://github.com/yoshizow/global-pygments-plugin"
@@ -17,7 +17,7 @@ source=(git://github.com/yoshizow/$_pkgname.git sample.globalrc)
 
 pkgver() {
         cd "$_pkgname"
-        git describe --long | sed -r 's/([^-]*-g)/r\1/;s/-/./g'
+        git describe --long --tags | sed -r 's/([^-]*-g)/r\1/;s/-/./g'
 }
 
 build() {
